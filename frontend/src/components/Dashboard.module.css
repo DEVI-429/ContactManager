@@ -110,13 +110,29 @@
     text-align: left; /* Adjust text alignment as needed */
   }
 
-  .filterContainer{
+  .filterContainer {
+    max-width: 100%;
     display: flex;
-    width: 90%;
-    display: flex;
-    flex-direction: row;
+    flex-wrap: wrap; /* Ensure items wrap to the next line on smaller screens */
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 10px; /* Adjust as needed for spacing between items */
+    margin-bottom: 20px; /* Optional: add margin-bottom for spacing */
+  }
+  
+  .inputField {
+    width: 100%; /* Make input fields take full width on smaller screens */
+    max-width: 300px; /* Limit maximum width for better readability */
+  }
+  
+  @media (min-width: 768px) {
+    .filterContainer {
+      gap: 20px; /* Increase gap between items on larger screens */
+    }
+  
+    .inputField {
+      width: auto; /* Revert input fields to their original width */
+      max-width: 100%; /* Ensure they don't exceed the container width */
+    }
   }
   
